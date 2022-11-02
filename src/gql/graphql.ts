@@ -16,6 +16,7 @@ export type Scalars = {
 
 export type Person = {
   __typename?: 'Person';
+  age?: Maybe<Scalars['Int']>;
   firstName: Scalars['String'];
   lastName: Scalars['String'];
   lastNameLength: Scalars['Int'];

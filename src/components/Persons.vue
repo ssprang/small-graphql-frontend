@@ -25,11 +25,24 @@ const users = computed<PersonsQuery["findPersons"]["content"]>(() => result.valu
 
 </script>
 <template>
-  <!-- template types are typed! -->
   <v-theme-provider theme="light" with-background class="pa-10">
-    <v-card v-for="user in users" class="d-flex pa-md-2">
-      <v-avatar color="surface-variant">{{ user?.firstName[0] }}{{ user?.lastName[0] }}</v-avatar>
-      <v-card-title>{{ user?.firstName }} {{ user?.lastName }}</v-card-title>
+    <v-card>
+      <v-card-title>
+        <v-icon icon="mdi-account-group"/>
+        Persons
+      </v-card-title>
+      <v-table>
+        <tbody>
+        <tr v-for="user in users" :key="user.lastName">
+          <td>
+            <v-avatar color="surface-variant">{{ user?.firstName[0] }}{{ user?.lastName[0] }}</v-avatar>
+          </td>
+          <!-- template types are typed! -->
+          <td>{{ user?.firstName }}</td>
+          <td>{{ user?.lastName }}</td>
+        </tr>
+        </tbody>
+      </v-table>
     </v-card>
   </v-theme-provider>
 </template>

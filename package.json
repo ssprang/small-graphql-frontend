@@ -11,7 +11,6 @@
   },
   "dependencies": {
     "@apollo/client": "^3.7.0",
-    "@mdi/font": "5.9.55",
     "@vue/apollo-composable": "^4.0.0-beta.1",
     "graphql": "^16.6.0",
     "graphql-tag": "^2.12.6",
@@ -23,6 +22,7 @@
   "devDependencies": {
     "@graphql-codegen/cli": "2.13.7",
     "@graphql-codegen/client-preset": "1.1.0",
+    "@mdi/font": "^7.0.96",
     "@types/webfontloader": "^1.0.0",
     "@typescript-eslint/eslint-plugin": "^5.41.0",
     "@vitejs/plugin-vue": "^3.1.0",

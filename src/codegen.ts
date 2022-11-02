@@ -2,7 +2,8 @@ import type { CodegenConfig } from '@graphql-codegen/cli'
 
 const config: CodegenConfig = {
     overwrite: true,
-    schema: 'src/graphql/schema.json',
+    //schema: 'src/graphql/schema.json',
+    schema: 'http://localhost:8080/graphql',
     documents: ['src/**/*.vue'],
     ignoreNoDocuments: true, // for better experience with the watcher
     generates: {
